@@ -13,6 +13,7 @@ import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import TransitionsModal from './Modal';
 
 function Copyright() {
   return (
@@ -147,30 +148,52 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KLAX&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KATL&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KATL&begin=1517227200&end=1517230000'
+                   />
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KORD&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KORD&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=VHHH&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=VHHH&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=RKSI&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=RKSI&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=EDDF&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <TransitionsModal 
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=LEBL&begin=1517227200&end=1517230000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517230000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
