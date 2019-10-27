@@ -101,6 +101,8 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
     overflow: 'auto',
     flexDirection: 'column',
   },
@@ -148,56 +150,67 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+                <h2>Los Angeles International Airport, Los Angeles</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KLAX&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KLAX&begin=1517227200&end=1517229000'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1517227200&end=1517229000'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Hartsfield–Jackson Atlanta International Airport, Atlanta</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KATL&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KATL&begin=1517227200&end=1517230000'
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KATL&begin=1517227200&end=1517228300'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KATL&begin=1517227200&end=1517228300'
                    />
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>O'Hare International Airport, Chicago</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KORD&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KORD&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KORD&begin=1517227200&end=1517227350'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KORD&begin=1517227200&end=1517227350'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2> Hong Kong International Airport, Chek Lap Kok</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=VHHH&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=VHHH&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=VHHH&begin=1517227200&end=1517227500'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=VHHH&begin=1517227200&end=1517227500'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2> Seoul Incheon International Airport, Incheon</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=RKSI&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=RKSI&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=RKSI&begin=1517227200&end=1517227600'
+                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=RKSI&begin=1517227200&end=1517227600'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Frankfurt Airport,	Frankfurt</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=EDDF&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=EDDF&begin=1517227200&end=1517227400'
+                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517227400'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Barcelona–El Prat Airport,	Barcelona</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=LEBL&begin=1517227200&end=1517230000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517230000'/>
+                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=LEBL&begin=1517227200&end=1517227800'
+                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=LEBL&begin=1517227200&end=1517227800'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Toronto Pearson International Airport,	Mississauga</h2>
+              <TransitionsModal 
+                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517229000'
+                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517227800'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>

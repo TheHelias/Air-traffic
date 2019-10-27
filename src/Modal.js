@@ -4,12 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
 
 const useStyles = makeStyles(theme => ({
   modal: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  buttonPosition: {
+    boxSizing: 'border-box',
+    color: 'blue'
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
@@ -22,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 export default function TransitionsModal(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [allData, setData] = React.useState({ arrivalData:null, departureData:null });
+  const [allData, setData] = React.useState({ arrivalData:'', departureData:'' });
   // const [answer, setAnswer] = React.useState();
   React.useEffect(() => {
     const Data = async () => {
@@ -49,7 +54,7 @@ export default function TransitionsModal(props) {
   return (
     <div>
       <button type="button" onClick={handleOpen}>
-        react-transition-group
+      <AirplanemodeActiveIcon className={classes.buttonPosition}/>
       </button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -65,20 +70,23 @@ export default function TransitionsModal(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">react-transition-group animates me.</p>
+            <h2 id="transition-modal-title">Arriving flights in the last 10 minutes</h2>
             <ul>
               {allData.arrivalData && allData.arrivalData.map((item) => (
               <li key={item.callsign}>
-              <p>{item.icao24}</p>
+              <p>ICAO: {item.icao24}</p>
+              <p>Call Sign: {item.callsign}</p>
+              <AirplanemodeActiveIcon />
         </li>
       ))}
     </ul>
-    <p>Gbese</p>
+    <h2>Departing flights in the last 10 minutes</h2>
     <ul>
               {allData.departureData && allData.departureData.map((item) => (
               <li key={item.callsign}>
-              <p>{item.icao24}</p>
+              <p>ICAO: {item.icao24}</p>
+              <p>Call Sign: {item.callsign}</p>
+              <AirplanemodeActiveIcon />
         </li>
       ))}
     </ul>
