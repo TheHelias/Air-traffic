@@ -209,16 +209,24 @@ export default function Dashboard() {
               <Paper className={fixedHeightPaper}>
               <h2>Toronto Pearson International Airport,	Mississauga</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517229000'
+                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517227800'
                   DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517227800'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Toronto Airport, Toronto</h2>
+              <TransitionsModal 
+                  ARRIVAL_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517227800'
+                  DEPARTURE_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517227800'/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
+              <h2>Charles de Gaulle International Airport,	France</h2>
+              <TransitionsModal 
+                  ARRIVAL_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=LFPG&begin=1517227200&end=1517227800'
+                  DEPARTURE_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=LFPG&begin=1517227200&end=1517227800'/>
               </Paper>
             </Grid>
           </Grid>

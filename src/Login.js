@@ -98,7 +98,9 @@ export default function Login() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+          <Link to="/dashboard" variant="body2">
+                Sign In
+              </Link>
           </Button>
           <Grid container>
             <Grid item xs>
