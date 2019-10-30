@@ -100,21 +100,22 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(4),
   },
   paper: {
-    padding: theme.spacing(2),
     display: 'flex',
-    alignItems: 'center',
     textAlign: 'center',
     overflow: 'auto',
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 400,
+  },
+  picture: {
+    height: 160,
   },
 }));
 
 const ARRIVAL_URL = 'https://Thelias:password@opensky-network.org/api/flights/arrival?airport=';
 const THIRTY_MINUTES_URL = '&begin=1517227200&end=1517229000';
-const DEPARTURE_URL = 'https://opensky-network.org/api/flights/departure?airport=';
+const DEPARTURE_URL = 'https://Thelias:password@opensky-network.org/api/flights/departure?airport=';
 const ONE_HOUR_URL = '&begin=1517227200&end=1517230800';
 
 export default function Dashboard() {
@@ -156,7 +157,8 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <h2>Los Angeles International Airport, Los Angeles</h2>
+                <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,frankfurt'}/>
+                <h4 >Los Angeles International Airport, Los Angeles</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}KLAX${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}KLAX${THIRTY_MINUTES_URL}`}/>
@@ -167,7 +169,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Hartsfield–Jackson Atlanta International Airport, Atlanta</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,atlanta'}/>
+              <h4>Hartsfield–Jackson Atlanta International Airport, Atlanta</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}KATL${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}KATL${THIRTY_MINUTES_URL}`}/>
@@ -178,7 +181,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>O'Hare International Airport, Chicago</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,chicago'}/>
+              <h4>O'Hare International Airport, Chicago</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}KORD${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}KORD${THIRTY_MINUTES_URL}`}/>
@@ -189,7 +193,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2> Hong Kong International Airport, Chek Lap Kok</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,hongkong'}/>
+              <h4> Hong Kong International Airport, Chek Lap Kok</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}VHHH${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}VHHH${THIRTY_MINUTES_URL}`}/>
@@ -200,7 +205,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2> Seoul Incheon International Airport, Incheon</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,incheon'}/>
+              <h4> Seoul Incheon International Airport, Incheon</h4>
               <TransitionsModal 
                 ARRIVAL_API= {`${ARRIVAL_URL}RKSI${THIRTY_MINUTES_URL}`}
                 DEPARTURE_API={`${DEPARTURE_URL}RKSI${THIRTY_MINUTES_URL}`}/>
@@ -211,7 +217,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Frankfurt Airport,	Frankfurt</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,frankfurt'}/>
+              <h4>Frankfurt Airport,	Frankfurt</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}EDDF${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}EDDF${THIRTY_MINUTES_URL}`}/>
@@ -223,7 +230,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Barcelona–El Prat Airport,	Barcelona</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,barcelona'}/>
+              <h4>Barcelona–El Prat Airport,	Barcelona</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}LEBL${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}LEBL${THIRTY_MINUTES_URL}`}/>
@@ -235,7 +243,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Toronto Pearson International Airport,	Mississauga</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,toronto'}/>
+              <h4>Toronto Pearson International Airport,	Mississauga</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}CYYZ${THIRTY_MINUTES_URL}`}/>
@@ -247,7 +256,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Toronto Airport, Toronto</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,canada'}/>
+              <h4>Toronto Airport, Toronto</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}CYYZ${THIRTY_MINUTES_URL}`}/>
@@ -259,7 +269,8 @@ export default function Dashboard() {
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-              <h2>Charles de Gaulle International Airport,	France</h2>
+              <img className={classes.picture} alt='airport' src={'https://source.unsplash.com/random?airport,paris'}/>
+              <h4>Charles de Gaulle International Airport,	France</h4>
               <TransitionsModal 
                   ARRIVAL_API= {`${ARRIVAL_URL}LEPG${THIRTY_MINUTES_URL}`}
                   DEPARTURE_API={`${DEPARTURE_URL}LEPG${THIRTY_MINUTES_URL}`}/>
