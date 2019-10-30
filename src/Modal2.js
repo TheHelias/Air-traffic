@@ -72,21 +72,21 @@ export default function TransitionsModalSecond(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Arriving flights in the last 10 minutes</h2>
+            <h2 id="transition-modal-title">Arriving flights in the last 1 hour</h2>
             <ul>
               {allData.arrivalData && allData.arrivalData.map((item) => (
               <li key={item.callsign}>
-              <p>ICAO: {item.icao24}</p>
+              <p>Airplane No: {item.icao24}</p>
               <p>Call Sign: {item.callsign}</p>
               <AirplanemodeActiveIcon />
         </li>
       ))}
     </ul>
-    <h2>Departing flights in the last 10 minutes</h2>
+    <h2>Departing flights in the last 1 hour</h2>
     <ul>
               {allData.departureData && allData.departureData.map((item) => (
               <li key={item.callsign}>
-              <p>ICAO: {item.icao24}</p>
+              <p>Airplane No: {item.icao24}</p>
               <p>Call Sign: {item.callsign}</p>
               <AirplanemodeActiveIcon />
         </li>
