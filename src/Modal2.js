@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function TransitionsModal(props) {
+export default function TransitionsModalSecond(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [allData, setData] = React.useState({ arrivalData:'', departureData:'' });
@@ -54,7 +54,7 @@ export default function TransitionsModal(props) {
 
   return (
     <div>
-      <p>Flights in the last 30 minutes</p>
+        <p>Flights in the last 1 hour</p>
       <button type="button" onClick={handleOpen}>
       <AirplanemodeActiveIcon className={classes.buttonPosition}/>
       </button>

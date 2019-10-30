@@ -14,6 +14,7 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import TransitionsModal from './Modal';
+import TransitionsModalSecond from './Modal2'
 
 function Copyright() {
   return (
@@ -111,6 +112,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const ARRIVAL_URL = 'https://Thelias:password@opensky-network.org/api/flights/arrival?airport=';
+const THIRTY_MINUTES_URL = '&begin=1517227200&end=1517229000';
+const DEPARTURE_URL = 'https://opensky-network.org/api/flights/departure?airport=';
+const ONE_HOUR_URL = '&begin=1517227200&end=1517230800';
+
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -152,81 +158,115 @@ export default function Dashboard() {
               <Paper className={fixedHeightPaper}>
                 <h2>Los Angeles International Airport, Los Angeles</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KLAX&begin=1517227200&end=1517229000'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KLAX&begin=1517227200&end=1517229000'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}KLAX${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KLAX${THIRTY_MINUTES_URL}`}/>
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}KLAX${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KLAX${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Hartsfield–Jackson Atlanta International Airport, Atlanta</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KATL&begin=1517227200&end=1517228300'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KATL&begin=1517227200&end=1517228300'
-                   />
+                  ARRIVAL_API= {`${ARRIVAL_URL}KATL${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KATL${THIRTY_MINUTES_URL}`}/>
+                     <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}KATL${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KATL${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>O'Hare International Airport, Chicago</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=KORD&begin=1517227200&end=1517227350'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=KORD&begin=1517227200&end=1517227350'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}KORD${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KORD${THIRTY_MINUTES_URL}`}/>
+                    <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}KORD${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}KORD${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2> Hong Kong International Airport, Chek Lap Kok</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=VHHH&begin=1517227200&end=1517227500'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=VHHH&begin=1517227200&end=1517227500'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}VHHH${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}VHHH${THIRTY_MINUTES_URL}`}/>
+                    <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}VHHH${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}VHHH${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2> Seoul Incheon International Airport, Incheon</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://opensky-network.org/api/flights/arrival?airport=RKSI&begin=1517227200&end=1517227600'
-                  DEPARTURE_API='https://opensky-network.org/api/flights/departure?airport=RKSI&begin=1517227200&end=1517227600'/>
+                ARRIVAL_API= {`${ARRIVAL_URL}RKSI${THIRTY_MINUTES_URL}`}
+                DEPARTURE_API={`${DEPARTURE_URL}RKSI${THIRTY_MINUTES_URL}`}/>
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}RKSI${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}RKSI${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Frankfurt Airport,	Frankfurt</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=EDDF&begin=1517227200&end=1517227400'
-                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=EDDF&begin=1517227200&end=1517227400'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}EDDF${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}EDDF${THIRTY_MINUTES_URL}`}/>
+
+              <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}EDDF${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}EDDF${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Barcelona–El Prat Airport,	Barcelona</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=LEBL&begin=1517227200&end=1517227800'
-                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=LEBL&begin=1517227200&end=1517227800'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}LEBL${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}LEBL${THIRTY_MINUTES_URL}`}/>
+
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}LEBL${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}LEBL${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Toronto Pearson International Airport,	Mississauga</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://Thelias:password@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517227800'
-                  DEPARTURE_API='https://Thelias:password@opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517227800'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}CYYZ${THIRTY_MINUTES_URL}`}/>
+
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}CYYZ${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Toronto Airport, Toronto</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=CYYZ&begin=1517227200&end=1517227800'
-                  DEPARTURE_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=CYYZ&begin=1517227200&end=1517227800'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}CYYZ${THIRTY_MINUTES_URL}`}/>
+
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}CYYZ${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}CYYZ${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
               <h2>Charles de Gaulle International Airport,	France</h2>
               <TransitionsModal 
-                  ARRIVAL_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=LFPG&begin=1517227200&end=1517227800'
-                  DEPARTURE_API='https://USERNAME:PASSWORD@opensky-network.org/api/flights/departure?airport=LFPG&begin=1517227200&end=1517227800'/>
+                  ARRIVAL_API= {`${ARRIVAL_URL}LEPG${THIRTY_MINUTES_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}LEPG${THIRTY_MINUTES_URL}`}/>
+
+                  <TransitionsModalSecond
+                  ARRIVAL_API= {`${ARRIVAL_URL}LEPG${ONE_HOUR_URL}`}
+                  DEPARTURE_API={`${DEPARTURE_URL}LEPG${ONE_HOUR_URL}`}/>
               </Paper>
             </Grid>
           </Grid>
